@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Accueil{% endblock %}
+{% block content %}
+    <div class="container mt-5">
+        <h1>Bienvenue</h1>
+        {% if user_email %}
+            <p>Bonjour {{ user_email }} !</p>
+        {% else %}
+            <p>Bonjour utilisateur anonyme !</p>
+        {% endif %}
+    </div>
+{% endblock %}
